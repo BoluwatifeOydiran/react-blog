@@ -1,0 +1,22 @@
+{
+  "blogs": [
+    {
+      "title": "my new website",
+      "body": "lorem ipsum ....",
+      "author": "Kaylux",
+      "id": 0
+    },
+    {
+      "title": "welocome party",
+      "body": "lorem ipsum ....",
+      "author": "Kaeys",
+      "id": 1
+    },
+    {
+      "title": "Development tool tipse",
+      "body": "lorem ipsum .....",
+      "author": "code weezard",
+      "id": 2
+    }
+  ]
+}
