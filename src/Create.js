@@ -1,11 +1,12 @@
 import { useState } from "react";
 import { useNavigate  } from "react-router-dom";
+import { url } from "./api/server";
 
 const Create = () => {
 
   const [title, setTitle] = useState('');
   const [body, setBody] = useState('');
-  const [author, setAuthor] = useState('yoshi');
+  // const [author, setAuthor] = useState('yoshi');
   const [isLoading, setisLoading] = useState(false);
   let navigate = useNavigate();
 
@@ -13,11 +14,11 @@ const Create = () => {
 
   const handlesubmit = (e) => {
     e.preventDefault();
-    const blog = {title, body, author}
+    const blog = {title, body}
 
     setisLoading(true);
 
-    fetch('http://localhost:8000/blogs', {
+    fetch(url, {
       method: 'POST',
       headers: { "Content-Type": "application/json"},
       body: JSON.stringify(blog)
@@ -45,14 +46,14 @@ const Create = () => {
        value={body}
        onChange = {(e) => setBody(e.target.value)} 
        />
-       <label>Blog author:</label>
+       {/* <label>Blog author:</label>
        <select
        value={author}
        onChange={(e) => setAuthor(e.target.value)}
        > 
          <option value="mario">Mario</option>
          <option value="yoshi">Yoshi</option>
-       </select>
+       </select> */}
        {!isLoading && <button>Add Blog</button>}
        {isLoading && <button>Loading</button>}
      </form>
