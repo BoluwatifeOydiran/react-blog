@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Create from "./Create";
 import BlogDetails from "./BlogDetails";
 import ErrorPage from "./ErrorPage";
+import Login from "./Login";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/create" element={<Create />} />
             <Route path="/blogs/:id" element={<BlogDetails />} />
+            <Route path="/login" element={<Login />} />
             <Route path="*" element={<ErrorPage />} />
           </Routes>
         </div>
